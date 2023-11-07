@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <script>
+         var targetDate = new Date('2023-11-16T00:00:00').getTime();
+
+function updateCountdown() {
+    var currentDate = new Date().getTime();
+    var timeRemaining = targetDate - currentDate;
+
+    if (timeRemaining > 0) {
+        var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = ('0' + days).slice(-2);
+        document.getElementById('hours').textContent = ('0' + hours).slice(-2);
+        document.getElementById('minutes').textContent = ('0' + minutes).slice(-2);
+        document.getElementById('seconds').textContent = ('0' + seconds).slice(-2);
+    } else {
+        document.getElementById('text1').innerHTML = '<nav><p>생일이다!!</p></nav>';
+        document.getElementById('countdown').innerHTML = '<nav><p>축하축하해!!</p></nav>';
+        document.getElementById('')
+    }
+}
+
+// 1초마다 updateCountdown 함수를 호출하여 카운트다운을 업데이트
+var countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+    <title>&#x1F388;Jiin's day&#x1F388;</title>
+    <head>
+        <meta property="og:title" content="김지인 생일축하해">
+        <meta property="og:image" content="e.jpg">
+        <h1>&#x1F382;Happy Birth Day&#x1F382;</h1>
+    </head>
+    <body>
+    <div clas="ment">
+    <nav id="text1"><p>생일 이만큼 남았다</p></nav>
+    <nav id="countdown"><p>
+        <span id="days">00</span>
+        <span class="col">일</span>
+        <span id="hours">00</span>
+        <span class="col">:</span>
+        <span id="minutes">00</span>
+        <span class="col">:</span>
+        <span id="seconds">00</span>
+    </p></nav></div>
+    <div class="line1"><img src="insta.png" height="20px" width="20px" class="insimg"> <a href="https://www.instagram.com/i_i_in06/" class="ins">INSTAGRAM</a>
+    
+    </div> 
+    <div class="img1">
+    <img src="a.jpg">
+    <img width="410px" height="420px" src="b.jpg">
+</div>
+<div class="img2">
+    <img width="425px" height="420px" src="c.jpg">
+    <img width="410px" height="420px" src="d.jpg">
+</div>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Handlee&family=Kenia&display=swap');
+    h1 {
+        font-family: 'Kenia', sans-serif;
+        font-size: 60px;
+        text-align: center
+    }
+    nav {
+        font-family: 'Gaegu', sans-serif;
+        text-align: center;
+        font-size: 30px;
+    }
+    .img1{
+        text-align: center;
+    }
+    .img2{
+        text-align: center;
+    }
+    .ins{
+        font-size: 20px;
+        position: relative;
+        top : -4px;
+        font-family: 'Handlee', cursive;
+        color: deeppink;
+        text-decoration: none;
+        position: relative;
+        right: -30px;
+    }
+    .ins:hover{
+        color: blue;
+    }
+    .insimg {
+        position: relative;
+        right: -30px;
+    }
+</style>
